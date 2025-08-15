@@ -108,7 +108,7 @@ h2{
 }
 .art-text p{
     color: white;
-    background: var(--font-color);
+    background: var(--bg-primary-color);
     border-radius: 15px;
     padding: 1rem 1.5rem;
     /* justify-content: center; */
@@ -124,6 +124,7 @@ h2{
 }
 .history_text p{
     text-align: justify;
+    color: #000000;
 }
 .history_text{
     display: flex;
@@ -183,8 +184,93 @@ nav, section, article{
     margin: 0.5rem;
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--font-color);
+    color: var(--bg-primary-color);
 }
+
+
+
+/* CONTACT SECTION STARTS HERE */
+
+.contact_hero{
+    height: auto;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+}
+.contact_hero img{
+    width: 95%;
+}
+.contact_hero h2{
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #03120E;
+    padding: .5rem 1rem;
+}
+
+ .info{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.left_side, .right_side{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #b8b4b4;
+    padding: 10px;
+}
+.left_side{
+    padding-left: 10px;
+    width: 50%;
+}
+.right_side{
+    padding-left: 10px;
+}
+/* .map{
+    width: 80%;
+
+} */
+#in{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    /* display: block; */
+    margin-top: 2px;
+    width: 97%;
+}
+.text label{
+    display: block;
+}
+.text textarea{
+    padding: 10px;
+    resize: vertical;
+    width: 97%;
+
+}
+.form_radio button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--bg-primary-color);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    /* align-items: center; */
+    /* text-align: center;
+    justify-content: center; */
+}
+.butt{
+    text-align: center;
+}
+
 
 footer{
     max-width: 840px;
@@ -245,6 +331,9 @@ footer a{
     }
     .hero{
         height: 70vh;
+    }
+    .info{
+        flex-direction: column;
     }
 }
 
