@@ -8,6 +8,7 @@
     --heading-font: "Caveat", cursive;
     --accent2-font: "EB Garamond", serif;
     --button-font: "Merriweather", serif;
+    --transition: all 0.3s ease;
 }
 *{
     margin: 0;
@@ -72,6 +73,81 @@ h2{
     font-weight: bold;
 }
 
+/* ///////HOME PAGE STARTS HERE */
+
+.home_hero{
+    width: 100%;
+    position: relative;
+}
+.home_hero img{
+    width: 100%;
+}
+.home_hero_text{
+    position: absolute;
+    bottom: 7%;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.home_hero_text h6{
+    font-size: 1.5rem;
+    color: #000000;
+    width: 70%;
+
+}
+.home_hero_text h4{
+    font-size: 2rem;
+    color: #000000;
+    width: 50%;
+}
+.home_hero_text button{
+    padding: 10px 15px;
+    background-color: var(--font-color);
+    color: var(--bg-accent2-color);
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.home_hero_text button:hover{
+    background-color: var(--bg-hover-color);
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+.why_us{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.safe, .expert, .fam{
+    border: 1px solid #c5c0c0;
+    padding:10px  20px;
+    border-radius: 5px;
+}
+.gallery_trips{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.gallery_trips img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.gallery_trips figcaption{
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--bg-primary-color);
+}
+/* ///////HOME PAGE ends HERE */
+
+
 .hero{
     height: 100vh;
     padding: 1rem 0;
@@ -111,7 +187,6 @@ h2{
     background: var(--bg-primary-color);
     border-radius: 15px;
     padding: 1rem 1.5rem;
-    /* justify-content: center; */
 }
 .history{
     max-width: 840px;
@@ -234,10 +309,6 @@ nav, section, article{
 .right_side{
     padding-left: 10px;
 }
-/* .map{
-    width: 80%;
-
-} */
 #in{
     padding: 10px;
     border-radius: 5px;
@@ -263,12 +334,118 @@ nav, section, article{
     border: none;
     color: white;
     font-size: 1rem;
-    /* align-items: center; */
-    /* text-align: center;
-    justify-content: center; */
 }
 .butt{
     text-align: center;
+}
+
+
+/* TRIPS SECTION STARTS HERE */
+.our_trips{
+    display: flex;
+    width: 100%;
+}
+.left_our_trips{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
+.left_our_trips h5{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.left_our_trips h3{
+    font-size: 2rem;
+}
+
+.left_our_trips_butt button{
+    padding: 12px 30px;
+    background-color: var(--font-color);
+    color: var(--bg-accent2-color);
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    animation: pulse 2s infinite 1s;
+}
+.left_our_trips_butt button:hover{
+    font-size: 1.2rem;
+    background-color: var(--button-color);
+    color: var(--bg-accent2-color);
+    transition: .9s ease-in-out;
+}
+.right_our_trips{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
+.right_our_trips img{
+    width: 80%;
+    border-radius: 50%;
+}
+.family{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.family img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* SUBSCRIPTION SECTION STARTS HERE */
+#subscription{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1rem;
+    padding: 20px;
+}
+.sub_plan h1{
+    /* text-align: left; */
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.sub{
+    border: 1px solid #c5c0c0;
+    padding:10px  20px;
+    border-radius: 5px;
+}
+.sub h3{
+    font-size: 1.5rem;
+}
+.sub h4{
+    font-size: 2rem;
+}
+.sub h6{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.sub button{
+    padding: 10px 15px;
+    background-color: var(--font-color);
+    color: var(--bg-accent2-color);
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.sub button:hover{
+    background-color: var(--bg-hover-color);
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+.sub:hover{
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 5px 8px 15px #d2caca;
 }
 
 
@@ -335,10 +512,47 @@ footer a{
     .info{
         flex-direction: column;
     }
+    .left_our_trips{
+        width: 100%;
+        justify-content: center;
+        align-items: center ;
+    }
+    .right_our_trips img{
+        display: none;
+    }
+    .family{
+        display: block;
+        height: 100%;
+    }
+    #subscription{
+        display: block;
+        column-gap: 10px;
+    }
+    .home_hero_text h6{
+        font-size: 1rem;
+        color: #000000;
+        width: 70%;
+    }
+    .home_hero_text h4{
+        font-size: 1.2rem;
+        color: #000000;
+        width: 50%;
+    }
+    .why_us{
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
 }
+
+
 
 @media (max-width: 480px){
     .gallery{
         grid-template-columns: 1fr;
     }
+    .gallery_trips{
+        display: block;
+    }
+ 
 }
